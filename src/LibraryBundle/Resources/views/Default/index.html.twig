@@ -1,0 +1,9 @@
+{% block body %}
+
+{% for livre in livres %}
+    {{livre.id}}
+    {{livre.titre}}
+    <a href="{{ url('comments_new') }}?titre={{livre.titre}}&cat={{livre.cat}}">commenter</a>
+{% endfor %}
+
+{% endblock %}
